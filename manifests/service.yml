@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+    name: "axionkubeclust1-bc82"
+    labels:
+        app: "axionkubeclust1-bc82"
+spec:
+    type: ClusterIP
+    ports:
+    - port: 80
+      targetPort: 80
+      protocol: TCP
+      name: http
+    selector:
+        app: "axionkubeclust1-bc82"
