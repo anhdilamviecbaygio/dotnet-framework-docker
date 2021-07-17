@@ -1,0 +1,17 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+    name: "axionkubeclust1-bc82"
+    labels:
+        app: "axionkubeclust1-bc82"
+    annotations:
+        kubernetes.io/ingress.class: addon-http-application-routing
+spec:
+    rules:
+        - host: axionkubeclust191f1-axionkubeclust1-bc82.aa3822d706954d539071.southcentralus.aksapp.io
+          http:
+            paths:
+            - path: /
+              backend:
+                serviceName: "axionkubeclust1-bc82"
+                servicePort: 80
